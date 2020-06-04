@@ -57,7 +57,7 @@ Connected components of same colored pixels (either black or white) are segmente
 
 For every black and white connected component neighbours, the borderpixles form a cluster ([](#at_detection): 5.Clustering). The pixels that are not included in these clusters gets dropped. The clustering gets done efficiently by using a hash table. 
 
-Now,for each cluster it tries to fit a quad,([](#at_detection): 6b.Quads). Since the AprilTag is a square, it tries to fit it inside the cluster, this
+Now, for each cluster it tries to fit a quad ([](#at_detection): 6b.Quads). Since the AprilTag is a square, it tries to fit it inside the cluster, this
 can be at an angle, so many different candidates gets picked. First the points are sorted by angle in a consistent winding order around their centroid. Corner points are identified by attempting to fit a line towindows of neighboring points. Line fits are computed using principal componentanalysis (PCA). The quad fitting step outputs a set of candidate quads for decoding
 
 After the quad candidates a picked, it then uses the original image to sample if there is an
@@ -67,7 +67,7 @@ Finally it outputs the detected tags in the image ([](#at_detection): 7.Output).
 translation and rotation between the camera and the tag.
 
 ## Configurable parameters of the detector {#apriltag-params}
-Apriltag3 has some configurable parameters that can increase the speed of the detector,but reduce the robustness. Follow [this link](https://github.com/duckietown/lib-dt-apriltags) to find out more about how each parameter affect the detector. These configurations are specific to every usecase, and therefore it needs to be tuned to fit the Autolab condtitions.
+Apriltag3 has some configurable parameters that can increase the speed of the detector, but reduce the robustness. Follow [this link](https://github.com/duckietown/lib-dt-apriltags) to find out more about how each parameter affect the detector. These configurations are specific to every usecase, and therefore it needs to be tuned to fit the Autolab condtitions.
 
 Extensive tests in different lighting conditions has been conducted, and the optimal configuration for the use of the detector in an Autolab is found to be:
 <div figure-id="tab:apriltag3-param" markdown="1">
