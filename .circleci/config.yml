@@ -1,53 +1,41 @@
-
 version: 3
 jobs:
-    build:
-        docker:
-        - image: duckietown/docs-build:daffy
-          environment:
-              COLUMNS: 160
-              TERM: xterm-256color
-              EXTRA_MCDP_RENDER_OPTIONS: --ignore_ref_errors
+  build:
+    docker:
+      - image: duckietown/docs-build:daffy
+        environment:
+          COLUMNS: 160
+          TERM: xterm-256color
 
-        resource_class: large
-        steps:
-        - run:
-           command: |
+    resource_class: large
+    steps:
+      - run:
+          name: "Adjust ssh settings for github"
+          command: |
             mkdir -p ~/.ssh/
             echo -e "\nHost github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-        - checkout
+      - checkout
 
+      - run:
+          name: Compile
+          command: |
+            make -f /docs-build/Makefile.build
 
-        - run:
-            name: Compile
-            command: |
-              make -f /docs-build/Makefile.build
+      - run:
+          when: always
+          name: Package artifacts
+          command:  |
+            find duckuments-dist -name '*.old' -delete
+            make  -f /docs-build/Makefile.build package-artifacts
 
-        - run:
-            name: Link check
-            command: |
-                # linkcheck drops permissions to nobody, so we need to make everything readable
-                chmod -R go+rwX /root
+      - store_artifacts:
+          path: out/package.tgz
+          destination: out/package.tgz
 
-                . /project/deploy/bin/activate && make linkcheck || true
+      - store_artifacts:
+          path: duckuments-dist
+          destination: duckuments-dist
 
-        - run:
-            when: always
-            name: Package artifacts
-            command:  |
-                find duckuments-dist -name '*.old' -delete
-                make package-artifacts
-
-        - store_artifacts:
-              path: out/package.tgz
-              destination: out/package.tgz
-
-
-        - store_artifacts:
-              path: duckuments-dist
-              destination: duckuments-dist
-
-
-        - test-results-store:
-            path: duckuments-dist/junit
+      - test-results-store:
+          path: duckuments-dist/junit
