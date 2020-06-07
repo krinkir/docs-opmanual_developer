@@ -11,22 +11,18 @@ jobs:
 
         resource_class: large
         steps:
-        - run:  
+        - run:
            command: |
             mkdir -p ~/.ssh/
             echo -e "\nHost github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-        
+
         - checkout
-        - run:
-            name: Download resources
-            command: |
-              git submodule sync --recursive
-              git submodule update --init --recursive
+
 
         - run:
             name: Compile
             command: |
-              mcdp-render --root . -c "rmake; rmake"
+              make -f /docs-build/Makefile.build
 
         - run:
             name: Link check
