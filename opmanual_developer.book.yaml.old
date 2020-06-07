@@ -50,7 +50,7 @@ html_output:
     likebtn:
     wordpress_integration: false
 
-output_debug_dir: debug
+output_debug_dir: duckuments-dist/
 
 use_mathjax: true
 raise_errors: true

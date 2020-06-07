@@ -3,7 +3,7 @@ version: 3
 jobs:
     build:
         docker:
-        - image: andreacensi/mcdp_books:daffy-devel
+        - image: duckietown/docs-build:daffy
           environment:
               COLUMNS: 160
               TERM: xterm-256color
@@ -13,7 +13,8 @@ jobs:
         steps:
         - run:  
            command: |
-            mkdir -p ~/.ssh/ && echo -e "\nHost github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+            mkdir -p ~/.ssh/
+            echo -e "\nHost github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
         
         - checkout
         - run:
