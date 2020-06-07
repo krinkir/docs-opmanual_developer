@@ -4,3 +4,4 @@ duckuments-dist
 node_modules
 .idea
 crossrefs_detected.txt
+opmanual_developer.book.yaml
