@@ -37,10 +37,11 @@ capability_ for a vehicle, while nodes within a module tackle more
 granular tasks, like _traffic signs detection_.
 
 In Duckietown, code is separated so that each module has its own
-repository. All repositories are hosted under the same GitHub
+repository. All official repositories are hosted under the same GitHub
 organization [github.com/duckietown](http://github.com/duckietown).
 Be brave, (as of April 2020) we have more than 220 repositories 
-there.
+there. You can also have your own modules hosted as repositories
+on your own GitHub account.
 
 
 ## Git
@@ -126,7 +127,7 @@ milestones in the project development timeline, for example a release.
 
 A fork is basically a copy of someone else's repository. 
 Usually, you cannot create branches or change code in other 
-people's repositories, thats why you create your own copy of it. 
+people's repositories, that's why you create your own copy of it. 
 This is called `forking`.
 
 
@@ -142,7 +143,23 @@ over the internet.
 You can use the commands `git fetch` and `git push` to bring your
 local copy of the repository in sync with a remote, by downloading
 commits or uploading new commits respectively.
-    
+
+
+#### ** Merging branches**
+
+Merging is the dual operation of creating a new branch. Imaigne you have
+branched out a new branch (e.g. _new-feature_) from the some branch
+(e.g. _master_), made some improvements and tested them out.
+Now you want to incorporate these changes
+in the _master_ branch which hosts your main code. The **merge** operation
+does exactly that. It takes the changes done in _new-feature_ and applies them
+to _master_.
+
+Often git will manage to apply these changes by itself. However, sometimes
+if both _new-feature_ and _master_ changed the same part of the code, git
+cannot determine by itself which of the two changes should be kept. Such a
+case is called _merge conflict_ and you will have to manually select what 
+should be kept after the merge.
     
 #### **Pull Requests**
 
@@ -279,7 +296,7 @@ run the command:
     $ git push origin --delete ![BRANCH-NAME]
 
 
-#### **Open a Git Issue**
+#### **Open a GitHub Issue**
 
 If you are experiencing issues with any code or content of a repository 
 (such as this operating manual you are reading right now), you can submit 
@@ -291,7 +308,7 @@ please visit this repository's
 [Issues page](https://github.com/duckietown/docs-opmanual_developer/issues) 
 to report an issue.
 
-Git Issues are a crucial part of the life cycle of a software product, as
+GitHub Issues are a crucial part of the life cycle of a software product, as
 they constitute a feedback loop that goes directly from the end-user to the
 product developers. You don't have to be a developer or an expert in software
 engineering to open an Issue. 
