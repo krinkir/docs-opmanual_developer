@@ -1,4 +1,4 @@
-# Projects: Fiducial Markers Detection at the Edge {#sec:projects_fiducial level=sec status=ready}
+# Projects: Fiducial Markers Detection at the Edge {#sec:projects_fiducial level=sec status=draft}
 
 Author: Alexander Hatteland
 
@@ -9,7 +9,7 @@ Duckietown community employs in all the Autolabs. It also explains what
 markers are used for, and how we are extracting the necessary information from them.
 This section also suggests a more decentralized approach to the online localization of the Autolab. 
 
-See also: To get a detailed overview of the tests conducted and other pipelines considered: [Onboard apriltag processing](https://ethidsc.atlassian.net/wiki/spaces/DS/pages/465371137/Design+Document+The+on-board+Apriltag+Processing?)
+See also: To get a detailed overview of the tests conducted and other pipelines considered, please read this design document: [Onboard apriltag processing](https://ethidsc.atlassian.net/wiki/spaces/DS/pages/465371137/Design+Document+The+on-board+Apriltag+Processing?)
 
 <minitoc/>
 
@@ -59,11 +59,15 @@ can be at an angle, so many different candidates get picked. First, the points a
 After the quad candidates a picked, it then uses the original image to sample if there is an
 AprilTag inside the quad ([](#at_detection): 6c.Samples). 
 
-Finally it outputs the detected tags in the image ([](#at_detection): 7.Output). It then uses the camera parameters to calculate the relative 
+Finally it outputs the detected tags in the image ([](#at_detection): 7.Output). It uses the camera parameters to calculate the relative 
 translation and rotation between the camera and the tag.
 
+For a more detailed explaination on how the detector works, please read the following papers: 
+
+[Apriltag](https://april.eecs.umich.edu/media/pdfs/olson2011tags.pdf), [Apriltag2](https://april.eecs.umich.edu/media/pdfs/wang2016iros.pdf), [Flexible Layouts for Fiducial Tags](https://april.eecs.umich.edu/media/pdfs/krogius2019iros.pdf)
+
 ## Configurable parameters of the detector {#apriltag-params}
-Apriltag3 has some configurable parameters that can increase the speed of the detector, but reduce the robustness. Follow [this link](https://github.com/duckietown/lib-dt-apriltags) to find out more about how each parameter affects the detector. These configurations are specific to every use-case, and therefore it needs to be tuned to fit the Autolab conditions.
+Apriltag3 has some configurable parameters that can increase the speed of the detector, but this can reduce the robustness. Follow [this link](https://github.com/duckietown/lib-dt-apriltags) to find out more about how each parameter affects the detector. These configurations are specific to every use-case, and therefore it needs to be tuned to fit the Autolab conditions.
 
 Extensive tests in different lighting conditions have been conducted, and the optimal configuration for the use of the detector in an Autolab is found to be:
 <div figure-id="tab:apriltag3-param" markdown="1">
@@ -116,9 +120,38 @@ The camera, which is being run by the camera node, captures images at 30 Hz at a
 ## Modifications to the detector node {#apriltag-duckietown-detector}
 To enable the use of AprilTag3 detector in Duckietown, a [Duckietown-specific Python wrapper](https://github.com/duckietown/lib-dt-apriltags) has been made. This wrapper enables the use of the detector function within Python, and therefore directly from the detector node inside [dt-core](https://github.com/duckietown/dt-core) which is the core stack of the Duckiebot and Watchtowers. These changes enable the detector to detect tags in rectified images. 
 
-With the pipeline described in [The localization Pipeline](#localization-pipeline), one needs to modify Apriltag3 c-library to enable detection on non-rectified images. The way this is done is to create a mapping between the pixels in the non-rectified image and the pixels in the rectified image. This map can be found using the camera info that is sent from the camera node. The detector already uses the Camera Parameters (fx, fy, cx, cy) to enable the retrieval of the relative pose estimates between Watchtower-camera and the AprilTag. By modifying the wrapper to send the whole camera info (distortion coefficients and projection matrix) to the AprilTag3, one can now create a mapping inside the detector, which will map every incoming pixel to their relative rectified pixel coordinate. To use this newly added feature, one needs to initialize the mapping by using the following function:
+With the pipeline described in [The localization Pipeline](#localization-pipeline), one needs to modify Apriltag3 c-library to enable detection on non-rectified images. The way this is done is to create a mapping between the pixels in the non-rectified image and the pixels in the rectified image. This map can be found using the camera info that is sent from the camera node that has been found during the intrinsic calibration. The detector already uses the Camera Parameters (fx, fy, cx, cy) to enable the retrieval of the relative pose estimates between Watchtower-camera and the AprilTag. By modifying the wrapper to send the whole camera info (distortion coefficients and projection matrix also), one can now create a mapping inside the detector, which will map every incoming pixel to their relative rectified pixel coordinate. 
 
-    Detector.enable_rectification_step(image_width, image_height, K, D, P)
+## Use AprilTag3 and the new feature in Python {#apriltag-rectification-usage}
+Follow the instructions on how to install the library [here](https://github.com/duckietown/lib-dt-apriltags).
+
+Import the library:
+
+    from dt_apriltags import Detector
+
+First, to use the AprilTag3 in python, one needs to initialize the detector. This is done by calling the function:
+
+    at_detector = Detector(searchpath=['apriltags'],
+                       families='tag36h11',
+                       nthreads=1,
+                       quad_decimate=1.0,
+                       quad_sigma=0.0,
+                       refine_edges=1,
+                       decode_sharpening=0.25,
+                       debug=0)
+
+The parameters that is shown here are configurable, and it is recommended to use the values of the [designchoice found above](#apriltag-params).
+To process an incomming image, one needs to give the at_detector the image and the according camara_parameters:
+
+     tags = at_detector.detect(img, estimate_tag_pose=False, camera_params=None, tag_size=None)
+
+If you also want to extract the tag pose, estimate_tag_pose should be set to True and camera_params ([fx, fy, cx, cy]) and tag_size (in meters) should be supplied. This will enable AprilTag detection on rectified images.
+
+To use this newly added feature, one needs to initialize the mapping by using the following function:
+
+    at_detector.enable_rectification_step(image_width, image_height, K, D, P)
+
+One needs to give the image pixel height and width. K is the full camera parameters (9x1), D is the distorion coefficients (8x1), P is the projection matrix (12x1)
 
 This function is only needed to be called once. When this function is called, the AprilTag3 will assume that the incoming image is non-rectified and therefore will rectify the image using mappings created inside Apriltag3.
 
