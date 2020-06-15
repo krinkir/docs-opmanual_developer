@@ -52,6 +52,8 @@ installing Ubuntu within a Virtual Environment on your laptop.
     Here is [20.04 LTS](http://releases.ubuntu.com/20.04/) make sure to download the desktop image.
 * Download your desired Virtual Machine platform (popular choices are Virtual Box and VMWare).
 
+Note: Using a Virtual Machine might require some particular settings for you networking settings. The virtual machine should appear as a device on your local network. For example, in VirtualBox, you need to set up a _Bridged Network_. This might differ in other hypervisors.
+
 ## Terminal
 
 Some pointers:
