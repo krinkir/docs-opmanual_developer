@@ -8,3 +8,4 @@ Improvements section
 - Include frontend into the dashboard
 - Incorporate other benchmark
 - Add authentication
+- Adjust docker digests for daffy container once it runs
