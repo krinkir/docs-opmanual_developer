@@ -1,4 +1,4 @@
-# Introduction {#sec:hw_benchmark_intro level=sec sta
+# Introduction {#sec:hw_benchmark_intro level=sec status=ready}
 
 In this section the Hardware Benchmark used in my Bachelor Thesis will be introduced. The associated repos are the following: 
 
