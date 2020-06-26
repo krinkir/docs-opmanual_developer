@@ -84,7 +84,7 @@ Start the calibration:
 
     $ dts duckiebot calibrate_intrinsics ![WT_HOST_NAME]
 
-Start collecting data for the calibration. Press on the calibrate button as soon as all bars are green. Click Commit and check under `![WT_HOST_NAME].local:8082/data/config/calibrations/camera_intrinsic/` that a file named `![WT_HOST_NAME].yaml` exists.
+Start collecting data for the calibration. Press on the calibrate button as soon as all bars are green. Click Commit and check under `WT_HOST_NAME.local:8082/data/config/calibrations/camera_intrinsic/` that a file named `WT_HOST_NAME.yaml` exists.
 
 #### World
 Use the instructions found [here](https://docs.duckietown.org/daffy/opmanual_autolab/out/autolab_map_making.html) to set up the jupyter notebook in order to generate a new map. Note you will have to create your own fork of the duckietown-world. Make sure to leave the repo name as is!
@@ -155,9 +155,11 @@ Clearly mark the different Duckiebots. Add an Apriltag to your Duckiebot and ent
 **Ensure that no hardware gets mixed between different configurations. Otherwise the whole benchmark will be invalidated.**
 
 #### Init SD Card
+This procedure only works if the special dt-shell-commands is installed. otherwise Proceed with the normal setup.
+
 Decide which software version (e.g. master19, daffy, ente) you want to run. Set the benchmark version to said software version using dts:
 
-    $ dts benchmark set {{benchmark_version}}
+    $ dts benchmark set [!SOFTWARE_VERSION]
 
 If the set version should be checked use the following command:
 
@@ -165,15 +167,15 @@ If the set version should be checked use the following command:
 
 Use the init_sd_card command as known. (Some options which could change the software version are disabled) Use said hostname: ![HOST_NAME]
 
-    $ dts init_sd_card --hostname ![HOST_NAME] --country CH --wifi {{networks}}
+    $ dts init_sd_card --hostname ![HOST_NAME] --country CH --wifi [!NETWORKS]
 
 **If you are using a 16GB SD-Card, use the `--compress` flag.**
 
 ### Initial Setup
 After the `init_sd_card` procedure ist over, take any charged battery (which doesn’t belong to one of the bots to be tested) and plug the Duckiebot in. After some time the bot should be pingable, then ssh-ing into it should be possible. 
 #### Portainer and compose
-Open [`![HOST_NAME].local:9000`](http://![HOST_NAME].local:9000) in a browser. As soon as portainer is running, there should be 4 containers one of which is not running (`duckietown/rpi-duckiebot-dashboard`), start that one via portainer.
-After a short time [`![HOST_NAME].local`](![HOST_NAME].local) should be reachable. Further progress of the installation can be see there after skipping the login. Finished setting up, enter the your duckietown-token.  
+Open [`HOST_NAME.local:9000`](http://HOST_NAME.local:9000) in a browser. As soon as portainer is running, there should be 4 containers one of which is not running (`duckietown/rpi-duckiebot-dashboard`), start that one via portainer.
+After a short time [`HOST_NAME.local`](HOST_NAME.local) should be reachable. Further progress of the installation can be see there after skipping the login. Finished setting up, enter the your duckietown-token.  
 
 #### Verification TODO delete
 Use this command to test the setup
@@ -240,10 +242,7 @@ master19
 
 ## Protocol
 TODO: Add Protocol
-
-
-
-
+Ex: terminatign conditions. 
 
 
 TODO: remove  {{}}
