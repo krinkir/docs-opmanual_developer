@@ -1,4 +1,4 @@
-# Robot types {#robot_types level=sec status=draft}
+# Robot types {#robot_types level=part status=draft}
 
 Author: Andrea F. Daniele
 
