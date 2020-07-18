@@ -9,7 +9,6 @@ Duckietown. It will guide you through the basics
 and tools needed for effective software development 
 in Duckietown.
 
-
 <minitoc levels="2"/>
 
 
