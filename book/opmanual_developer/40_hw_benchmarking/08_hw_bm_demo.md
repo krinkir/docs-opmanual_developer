@@ -28,4 +28,6 @@ Now it is time to run the benchmark you can use the `dts`:
 
     laptop $ dts benchmark ![BOTNAME] -a ![YOUR_LOCAL_IP_ADDRESS]:5000
 
-If your API is not running online, enter the API URL.
+If your API is not running online, enter the API URL. 
+
+You need two terminals, another one to prepare the start of lane following as described in the output of the CLI

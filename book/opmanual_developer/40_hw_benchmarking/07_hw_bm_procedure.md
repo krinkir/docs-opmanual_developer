@@ -4,9 +4,6 @@ Author: Luzian Bieri
 
 Maintainer: Luzian Bieri
 
-This section of the book will introduce Linux distributions and specifically
-the Ubuntu distribution. We will provide guides for installing Ubuntu in 
-_dual-boot_ mode or inside a _virtual machine_.
 
 <minitoc/>
 
@@ -56,6 +53,7 @@ Add your dts token via:
 The branch benchmarking fixes all software versions to a specific one in order to ensure reproducibility. Additinally the command group benchmark is added. This is used to specify the version of benchmarking software.
 
 ### Duckietown world {#dw-setup}
+In principal this step can be skipped as well if no localization system is around. Please continue with <a class="only_number" href="#dw-setup"></a>.
 #### Tiles
 For the first benchmark we need the “normal” 3x3 circle circuit. Please ensure that the tiles are cleaned and assembled to [specifications](https://docs.duckietown.org/DT18/opmanual_duckietown/out/dt_ops_appearance_specifications.html). 
 Especially make sure that the road has the correct width.
@@ -249,9 +247,3 @@ daffy
 master19
 
     $ rosservice call /![HOST_NAME]/inverse_kinematics_node/set_trim -- TRIM_VALUE
-
-
-
-## Protocol
-TODO: Add Protocol
-Ex: terminatign conditions. 

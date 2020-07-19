@@ -60,4 +60,4 @@ All scores are displayed on the web interface including the possibility to downl
 </figure>
 
 ## CLI
-TODO
+The CLI is part of the Duckietown shell `dts` benchmark command. More explanation can be found in the section  Demo. 
