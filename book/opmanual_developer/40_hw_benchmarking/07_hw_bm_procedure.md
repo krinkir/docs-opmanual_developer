@@ -201,23 +201,35 @@ As the `duckiebot-interface` should be already running use the following command
 
 Daffy
 
-    $ dts duckiebot demo --demo_name camera --duckiebot_name ![HOST_NAME] --package_name pi_camera --image {{img_core}}
+    $ dts duckiebot demo --demo_name camera --duckiebot_name ![HOST_NAME] --package_name pi_camera --image duckietown/dt-core:daffy@sha256:4c7633c2041f5b7846be2346e0892c9f50987d2fd98d3479ec1a4cf378f52ee6
 
 Master19
 
-    $ dts duckiebot demo --demo_name camera --duckiebot_name ![HOST_NAME] --image {{img_core}}
+    $ dts duckiebot demo --demo_name camera --duckiebot_name ![HOST_NAME] --image duckietown/rpi-duckiebot-base:master19@sha256:80f23a1835e6b3f9d2606aae54ce824dd13085e3e7491e87c7f0216797964b5c
 
 
 Then run the calibration using the command:
 
-    $ dts duckiebot calibrate_intrinsics ![HOST_NAME] --base_image  {{img_core_ad64}}
+Daffy
+
+    $ dts duckiebot calibrate_intrinsics ![HOST_NAME] --base_image  duckietown/dt-core:daffy-amd64@sha256:d72e8a8c3191c146ecc2a812bdd036aaf15076e6c1cb9467304e0e54f9a39a10
+
+Master19
+
+    $ dts duckiebot calibrate_intrinsics ![HOST_NAME] --base_image  duckietown/rpi-duckiebot-base:master19-no-arm@sha256:bcefefe0e249b8b1fcde21b3eaa6c7af5737fbf92003854376be9541a97257a2
 
 *info it may take some time until the image is completely downloaded*
 
 ##### Camera extrinsic
 Then run the calibration using the command:
 
-    $ dts duckiebot calibrate_extrinsics ![HOST_NAME] --base_image  {{img_core_ad64}}
+Daffy
+
+    $ dts duckiebot calibrate_extrinsics ![HOST_NAME] --base_image  duckietown/dt-core:daffy-amd64@sha256:d72e8a8c3191c146ecc2a812bdd036aaf15076e6c1cb9467304e0e54f9a39a10
+
+Master19
+
+    $ dts duckiebot calibrate_intrinsics ![HOST_NAME] --base_image  duckietown/rpi-duckiebot-base:master19-no-arm@sha256:bcefefe0e249b8b1fcde21b3eaa6c7af5737fbf92003854376be9541a97257a2
 
 
 #### Wheels
@@ -243,6 +255,3 @@ master19
 ## Protocol
 TODO: Add Protocol
 Ex: terminatign conditions. 
-
-
-TODO: remove  {{}}

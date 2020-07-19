@@ -51,11 +51,13 @@ The frontend provides an interface to upload data manually, as one may make the 
     <figcaption>Benchmark Upload</figcaption>
     <img alt="Benchmark Upload" style='width:28em' src="/images/bm_upload.png"/>
 </figure>
+
 ### Score Display
 All scores are displayed on the web interface including the possibility to download the saved data and the 
 <figure>
     <figcaption>Score Display</figcaption>
     <img alt="Score Display" style='width:28em' src="/images/score_display.png"/>
 </figure>
+
 ## CLI
 TODO

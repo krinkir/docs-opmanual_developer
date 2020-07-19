@@ -8,15 +8,24 @@ This section presents a demo of the hardware benchmark where all is run on your 
 ### Saving data locally
 In order to start the API which saves data on your local machine use the following command: 
 
-    laptop $ docker run -dit -p 5000:5000 -e LOCAL=true -v/data:[!path/to/local/dir] bm_backend
+    laptop $ docker run -v /PATH/TO/DATA/DIR/:/data/ -it -e LOCAL=True -p 5000:5000 -e APP_SECRET=![DT_APP_SECRET] -e APP_ID=![APP_ID] --rm duckietown/dt-hardware-benchmark-backend:daffy-amd64
 
 ### Saving data online
+**Careful the API address in the frontend is hardcoded and thus needs to be adjusted**
+
 In order to start the API which saves data on s3 and a MySQL database use the following command: 
 
-    laptop $ docker run -dit -p 5000:5000 -e MYSQL_USER=[!DB_USER] -e MYSQL_PW=[!DB_PW] -e MYSQL_URL=[!DB_URL] -e MYSQL_DB=[!DB_NAME] -e AWS_SECRET_ACCESS_KEY=[!AWS_SECRET_ACCESS_KEY] -e AWS_ACCESS_KEY_ID=[!AWS_ACCESS_KEY_ID] bm_backend
+    laptop $ docker run -dit -p 5000:5000 -e MYSQL_USER=![DB_USER] -e MYSQL_PW=![DB_PW] -e MYSQL_URL=![DB_URL] -e MYSQL_DB=![DB_NAME] -e AWS_SECRET_ACCESS_KEY=![AWS_SECRET_ACCESS_KEY] -e AWS_ACCESS_KEY_ID=![AWS_ACCESS_KEY_ID] -e APP_SECRET=![DT_APP_SECRET] -e APP_ID=![APP_ID]--rm duckietown/dt-hardware-benchmark-backend:daffy-amd64
 
-TODO: add correct image
 ## Start the Frontend
-TODO:  
+**Adjust the API address if wanted to run online** 
+
+    laptop $ docker run -it -p 3000:80 --rm duckietown/dt-hardware-benchmark-frontend:daffy-amd64
+
+It then is reachable under `localhost:3000`
 ## Run the benchmark
-TODO: 
+Now it is time to run the benchmark you can use the `dts`:
+
+    laptop $ dts benchmark ![BOTNAME] -a ![YOUR_LOCAL_IP_ADDRESS]:5000
+
+If your API is not running online, enter the API URL.
