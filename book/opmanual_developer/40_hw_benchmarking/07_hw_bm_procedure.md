@@ -53,7 +53,7 @@ Add your dts token via:
 The branch benchmarking fixes all software versions to a specific one in order to ensure reproducibility. Additinally the command group benchmark is added. This is used to specify the version of benchmarking software.
 
 ### Duckietown world {#dw-setup}
-In principal this step can be skipped as well if no localization system is around. Please continue with <a class="only_number" href="#dw-setup"></a>.
+In principal this step can be skipped as well if no localization system is around. Please continue with <a class="only_number" href="#db-setup"></a>.
 #### Tiles
 For the first benchmark we need the “normal” 3x3 circle circuit. Please ensure that the tiles are cleaned and assembled to [specifications](https://docs.duckietown.org/DT18/opmanual_duckietown/out/dt_ops_appearance_specifications.html). 
 Especially make sure that the road has the correct width.
@@ -144,7 +144,7 @@ Start the acquisition-bridge on all watchtowers:
 
     laptop $ docker -H ![WT_HOST_NAME].local run --name acquisition-bridge --network=host -e ROBOT_TYPE=watchtower -e LAB_ROS_MASTER_IP=![YOUR_PC_IP] -dit duckietown/acquisition-bridge:daffy-arm32v7
 
-### Duckiebot
+### Duckiebot {#db-setup}
 #### Hardware Setup
 Assemble the Duckiebot as prescribed in the manual of the respective version of the Kit.
 Ensure that no wires are touching the wheels, or hinder the benchmark in any other way.
@@ -170,6 +170,8 @@ Use the init_sd_card command as known. (Some options which could change the soft
 **If you are using a 16GB SD-Card, use the `--compress` flag.**
 
 ### Initial Setup
+If you have a complete set up and calibrated bot you might want to move to the next Unit <a class="only_number" href="#sec:hw_benchmark_demo"></a>
+
 After the `init_sd_card` procedure ist over, take any charged battery (which doesn’t belong to one of the bots to be tested) and plug the Duckiebot in. After some time the bot should be pingable, then ssh-ing into it should be possible. 
 #### Portainer and compose
 Open [`HOST_NAME.local:9000`](http://HOST_NAME.local:9000) in a browser. As soon as portainer is running, there should be 4 containers one of which is not running (`duckietown/rpi-duckiebot-dashboard`), start that one via portainer.
