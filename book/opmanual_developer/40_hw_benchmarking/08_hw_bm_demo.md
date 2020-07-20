@@ -4,7 +4,8 @@ This section presents a demo of the hardware benchmark where all is run on your 
 
 <minitoc/>
 
-## Start the API 
+## Start the API
+The `![DT_APP_SECRET]` and `![APP_ID]` can be retrieved by either asking via the Slack or by using the Web-Debugger in the [Duckietown Diagnostics](https://dashboard.duckietown.org/diagnostics) within a (GET-)request header.
 ### Saving data locally
 In order to start the API which saves data on your local machine use the following command: 
 
