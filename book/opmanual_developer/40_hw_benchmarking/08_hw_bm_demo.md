@@ -14,7 +14,7 @@ In order to start the API which saves data on your local machine use the followi
 ### Saving data online
 **Careful the API address in the frontend is hardcoded and thus needs to be adjusted**
 
-In order to start the API which saves data on s3 and a MySQL database use the following command: 
+In order to start the API which saves data on S3 and a MySQL database use the following command: 
 
     laptop $ docker run -dit -p 5000:5000 -e MYSQL_USER=![DB_USER] -e MYSQL_PW=![DB_PW] -e MYSQL_URL=![DB_URL] -e MYSQL_DB=![DB_NAME] -e AWS_SECRET_ACCESS_KEY=![AWS_SECRET_ACCESS_KEY] -e AWS_ACCESS_KEY_ID=![AWS_ACCESS_KEY_ID] -e APP_SECRET=![DT_APP_SECRET] -e APP_ID=![APP_ID]--rm duckietown/dt-hardware-benchmark-backend:daffy-amd64
 
@@ -25,7 +25,7 @@ In order to start the API which saves data on s3 and a MySQL database use the fo
 
 It then is reachable under `localhost:3000`
 ## Run the benchmark
-You need two terminals, another one to prepare the start of lane following as described in the output of the CLI.
+You need two terminals, another one to prepare the start of lane following as described in the output of the CLI. Plug in a USB Stick int the **top left** port
 
 Now it is time to run the benchmark you can use the `dts`:
 
