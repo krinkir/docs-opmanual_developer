@@ -235,7 +235,7 @@ class Foo:
 
 ```
 
-You can find more details about reStructuredText [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) and [here](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
+You can find more examples with reStructuredText [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) and [here](https://docutils.sourceforge.io/docs/user/rst/quickref.html), and detailed specification [here](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html).
 
 ### Referencing other objects
 
