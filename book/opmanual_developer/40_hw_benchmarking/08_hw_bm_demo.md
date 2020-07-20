@@ -8,7 +8,7 @@ This section presents a demo of the hardware benchmark where all is run on your 
 ### Saving data locally
 In order to start the API which saves data on your local machine use the following command: 
 
-    laptop $ docker run -v /PATH/TO/DATA/DIR/:/data/ -it -e LOCAL=True -p 5000:5000 -e APP_SECRET=![DT_APP_SECRET] -e APP_ID=![APP_ID] --rm duckietown/dt-hardware-benchmark-backend:daffy-amd64
+    laptop $ docker run -v ![/PATH/TO/DATA/DIR/]:/data/ -it -e LOCAL=True -p 5000:5000 -e APP_SECRET=![DT_APP_SECRET] -e APP_ID=![APP_ID] --rm duckietown/dt-hardware-benchmark-backend:daffy-amd64
 
 ### Saving data online
 **Careful the API address in the frontend is hardcoded and thus needs to be adjusted**
@@ -24,10 +24,10 @@ In order to start the API which saves data on s3 and a MySQL database use the fo
 
 It then is reachable under `localhost:3000`
 ## Run the benchmark
+You need two terminals, another one to prepare the start of lane following as described in the output of the CLI.
+
 Now it is time to run the benchmark you can use the `dts`:
 
     laptop $ dts benchmark ![BOTNAME] -a ![YOUR_LOCAL_IP_ADDRESS]:5000
 
-If your API is not running online, enter the API URL. 
-
-You need two terminals, another one to prepare the start of lane following as described in the output of the CLI
+If your API is running online, enter the `API_URL` including the . 
