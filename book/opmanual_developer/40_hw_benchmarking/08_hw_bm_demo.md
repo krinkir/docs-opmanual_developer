@@ -27,10 +27,10 @@ It then is reachable under `localhost:3000`
 ## Run the benchmark
 Ensure that Lane following runs on your duckiebot, if necessary consult the resp. [documentation](https://docs.duckietown.org).
 
-You need two terminals, another one to prepare the start of lane following as described in the output of the CLI. Plug in a USB Stick int the **top left** port
+You need two terminals, another one to prepare the start of lane following as described in the output of the CLI. Plug in a USB Stick int the **top left** port of the Duckiebot.
 
 Now it is time to run the benchmark you can use the `dts`:
 
     laptop $ dts benchmark ![BOTNAME] -a ![YOUR_LOCAL_IP_ADDRESS]:5000
 
-If your API is running online, enter the `API_URL` including the . 
+If your API is running online, enter the `API_URL` including the protocol (i.e. `https://`). 
