@@ -15,7 +15,7 @@ If a setup (especially the Duckiebot) is already prepared, **you might continue 
 
 ### Duckietown shell
 If not installed yet install the newest version of dts (duckietown shell) via the instructions provided by the [docs](https://github.com/duckietown/duckietown-shell)
-Currently we are using a custom stack of the duckietown shell commands, which fix all software to fixed versions to ensure comparability among different hardware configurations. As they are not in the original repo (yet) they have to be cloned from [this fork](https://github.com/duckietown/duckietown-shell). We are interested in the benchmarking branch. 
+Currently we are using a custom stack of the duckietown shell commands, which fix all software to fixed versions to ensure comparability among different hardware configurations. As they are not in the original repo (yet) they have to be cloned from [this fork](https://github.com/lujobi/duckietown-shell-commands-fixed-images). We are interested in the benchmarking branch. 
 
 #### Installing
 Use the following commands in a directory of your choice, recommended `/home/user/Documents/benchmarking`.
