@@ -8,7 +8,7 @@ Maintainer: Luzian Bieri
 <minitoc/>
 
 ## Environment
-
+The environmental requirements are minimal. Use at minimum a 3x3 Loop without intersections. Ensure that the map is exclusively illuminated from the ceiling, block all light coming from the side. Use a dark, neutral surrounding for all tiles in order to no disturb the lane detection. 
 
 ## Setup
 If a setup (especially the Duckiebot) is already prepared, **you might continue with the next chapter**. See <a class="only_number" href="#dw-setup"></a>. _Please mind that the hardware benchmark results aren't fully comparable, as the benchmark aims to compare different hardware setups using the same software._
