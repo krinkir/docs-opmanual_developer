@@ -25,6 +25,8 @@ In order to start the API which saves data on S3 and a MySQL database use the fo
 
 It then is reachable under `localhost:3000`
 ## Run the benchmark
+Ensure that Lane following runs on your duckiebot, if necessary consult the resp. [documentation](https://docs.duckietown.org).
+
 You need two terminals, another one to prepare the start of lane following as described in the output of the CLI. Plug in a USB Stick int the **top left** port
 
 Now it is time to run the benchmark you can use the `dts`:
