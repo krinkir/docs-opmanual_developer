@@ -3,6 +3,14 @@
 <minitoc/>
 
 
+## Running example {#devel_sw_diagnostics_example}
+
+Throughout this section we will refer to the toy example of a robot
+with a single camera (just like our Duckiebots) in which camera drivers 
+produce image frames at a frequency of `20Hz` and we are interested in
+pushing the camera to its limit, i.e., `30Hz`.
+
+
 ## When do I need it?
 
 You need to run the diagnostics tool every time you have made changes
@@ -52,11 +60,3 @@ values of `T`.
 In this case, we would run the diagnostics tool at any point in time for a 
 duration of `t > T` seconds so that at least one event of interest (e.g., ICP event) 
 is captured.
-
-
-## Running example {#devel_sw_diagnostics_example}
-
-Throughout this section we will refer to the toy example of a robot
-with a single camera (just like our Duckiebots) in which camera drivers 
-produce image frames at a frequency of `20Hz` and we are interested in
-pushing the camera to its limit, i.e., `30Hz`.
