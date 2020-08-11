@@ -1,6 +1,6 @@
 # Software Diagnostics {#part:sw_diagnostics level=part status=ready}
 
-One of the strenght of Duckietown is that of allowing complex 
+One of the strenghts of Duckietown is that of allowing complex 
 (sometimes state-of-the-art) algorithms to run on low-end computing
 devices like the Raspberry Pi.
 Unfortunately, low-end devices are not famous for their computational
