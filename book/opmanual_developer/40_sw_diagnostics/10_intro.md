@@ -35,8 +35,8 @@ a system to a change.
 
 The diagnostics tool is commonly used for two use cases:
 
-- analysis the _steady state_ (long-term effects) of a system;
-- analysis of _transient state_ (short-term effects) of a system;
+- analysis of _steady states_ (long-term effects) of a system;
+- analysis of _transient states_ (short-term effects) of a system;
 
 The _steady state_ analysis consists of measuring the activity of a system
 in the long run and in the absense of anomaly or changes. For example,
@@ -54,7 +54,7 @@ every `T` seconds. Clearly, small values of `T` mean fewer point clouds to align
 every time ICP fires but more frequent alignments while large values of `T` mean
 longer queues of point clouds to align every time ICP fires. 
 We might be interested in tuning the value of `T` so that those
-spikes do not starve other processes of resources while still reducing `T`.
+spikes do not starve other processes of resources while still maximizing `T`.
 In this case, we would monitor the system around those ICP events for different
 values of `T`.
 In this case, we would run the diagnostics tool at any point in time for a 
