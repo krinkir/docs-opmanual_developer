@@ -1,4 +1,4 @@
-# Duckietown Developer {#book:developer level=book status=ready}
+# Duckietown Developer {#book:book level=book status=ready}
 
 Author: Andrea F. Daniele
 
