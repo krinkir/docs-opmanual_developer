@@ -157,7 +157,6 @@ If the build is successful, you will see something like the following.
     <img alt="dts devel build" style='width:36em' src="images/dts_devel_build_ex1.jpg"/>
 </figure>
 
-<br/>
 Congrats! You just built your first Duckietown-compatible software module.
 
 
