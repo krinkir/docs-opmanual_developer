@@ -92,7 +92,7 @@ using the one above.
 
 
 ## Create your own module {#sec:devel_create_module_repo}
-
+<!---
 
 
 In order to be able to create a Duckietown module, you need to gain access to
@@ -112,7 +112,7 @@ and click on the Fork button at the top-right corner of the page.
     <img alt="github.com fork button" style='width:26em' src="images/github_fork_button.jpg"/>
 </figure>
 
-<!---
+
 
 
 Once you gained access to the template (either by joining the Duckietown developers
