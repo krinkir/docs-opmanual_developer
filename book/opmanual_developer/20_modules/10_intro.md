@@ -1,6 +1,6 @@
 test
 
-<!---
+
 
 # Introduction {#sec:devel_modules_intro level=sec status=ready}
 
@@ -62,6 +62,7 @@ types and their differences will be the topic of the section
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
 
+<!---
 
 ## Module Templates
 
