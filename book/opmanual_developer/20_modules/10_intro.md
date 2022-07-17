@@ -149,7 +149,7 @@ ARG REPO_NAME="<REPO_NAME_HERE>"
 ARG DESCRIPTION="<DESCRIPTION_HERE>"
 ARG MAINTAINER="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
 ```
-
+<!---
 Replace the placeholders strings with, respectively,
  - the name of the repository (i.e., `my_module`); 
  - a brief description of the functionalities of the module
@@ -200,5 +200,5 @@ TODO: This is a templated subsection
 
 TODO: This is a templated subsection
 
-<!---
+
 --->
