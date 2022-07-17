@@ -59,11 +59,10 @@ in the book.
 As for the good news, i.e., why using Docker to isolate modules makes sense and our
 life easier, we could write a book about it, but they will become clear as we proceed.
 
-<!---
+
 
 Duckietown defines a set of module types that you can choose from. The list of module
-types and their differences will be the topic of the section 
-[](#sec:developer_module_types). What is important to know for now, is that a module
+types and their differences will be the topic of the section  **TBD**. What is important to know for now, is that a module
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
 
@@ -132,7 +131,7 @@ and then choose **New repository**. In the _New repository_ page, choose the tem
 
 Click on **Create repository** to create the module repository.
 
-
+<!---
 
 ## Build a module
 
