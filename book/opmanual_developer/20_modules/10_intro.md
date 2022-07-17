@@ -137,7 +137,7 @@ Click on **Create repository** to create the module repository.
 
 Building a module is very simple. To start, open a terminal and clone a module repository 
 (we created one in section **TODO** ).
-
+<!---
 Templates leave placeholders that you will need to replace with the proper information
 about your module before you can build it.
 
@@ -149,7 +149,7 @@ ARG REPO_NAME="<REPO_NAME_HERE>"
 ARG DESCRIPTION="<DESCRIPTION_HERE>"
 ARG MAINTAINER="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
 ```
-<!---
+
 Replace the placeholders strings with, respectively,
  - the name of the repository (i.e., `my_module`); 
  - a brief description of the functionalities of the module
@@ -173,6 +173,7 @@ If the build is successful, you will see something like the following.
 </figure>
 
 <br/>
+
 Congrats! You just built your first Duckietown-compatible software module.
 
 
