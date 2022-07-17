@@ -27,8 +27,6 @@ a developer, you might want to bookmark that URL, you will need it, **a lot**.
 <minitoc/>
 
 
-
-
 ## What is a module
 
 A module in Duckietown is a Docker image that complies with a **module template**
@@ -60,6 +58,8 @@ types and their differences will be the topic of the section
 [](#sec:developer_module_types). What is important to know for now, is that a module
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
+
+<!---
 
 ## Module Templates
 
@@ -169,7 +169,7 @@ If the build is successful, you will see something like the following.
 <br/>
 Congrats! You just built your first Duckietown-compatible software module.
 
-<!---
+
 
 ## Run a module
 
