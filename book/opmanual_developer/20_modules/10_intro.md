@@ -93,7 +93,7 @@ using the one above.
 
 ## Create your own module {#sec:devel_create_module_repo}
 
-<!---
+
 
 In order to be able to create a Duckietown module, you need to gain access to
 the module template repositories on GitHub.
@@ -175,7 +175,7 @@ If the build is successful, you will see something like the following.
 <br/>
 Congrats! You just built your first Duckietown-compatible software module.
 
-
+<!---
 
 ## Run a module
 
