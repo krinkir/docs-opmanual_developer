@@ -6,6 +6,8 @@ Author: Andrea F. Daniele
 
 Maintainer: Andrea F. Daniele
 
+--->
+
 
 A software module in Duckietown implements a high level behavior, for example,
 autonomous driving in Duckietown. A software module is broken into a set of smaller
@@ -174,7 +176,7 @@ In the example above, look for the line
 Final image name: duckietown/my_module:v1-amd64
 ```
 
-
+<!---
 
 
 ## Hands on
