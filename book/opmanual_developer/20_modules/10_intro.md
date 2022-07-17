@@ -1,4 +1,4 @@
-<!---
+
 
 # Introduction {#sec:devel_modules_intro level=sec status=ready}
 
@@ -6,7 +6,7 @@ Author: Andrea F. Daniele
 
 Maintainer: Andrea F. Daniele
 
---->
+
 
 
 A software module in Duckietown implements a high level behavior, for example,
@@ -103,6 +103,7 @@ and click on the Fork button at the top-right corner of the page.
     <img alt="github.com fork button" style='width:26em' src="images/github_fork_button.jpg"/>
 </figure>
 
+--->
 
 Once you gained access to the template (either by joining the Duckietown developers
 team or forking the template repository), you are able to create a new repository that
@@ -177,7 +178,7 @@ In the example above, look for the line
 Final image name: duckietown/my_module:v1-amd64
 ```
 
-<!---
+
 
 
 ## Hands on
@@ -189,5 +190,5 @@ TODO: This is a templated subsection
 
 Todo: This is templated
 
--->
+
 
