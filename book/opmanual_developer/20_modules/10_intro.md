@@ -119,6 +119,7 @@ and then choose **New repository**. In the _New repository_ page, choose the tem
 </figure>
 
 <br/>
+
 Click on **Create repository** to create the module repository.
 
 
