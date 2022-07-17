@@ -30,7 +30,7 @@ a developer, you might want to bookmark that URL, you will need it, **a lot**.
 
 <minitoc/>
 
-<!---
+
 
 ## What is a module
 
@@ -88,6 +88,7 @@ Since understanding the differences between different templates is outside the s
 this section, we can use any template for the remainder of this section, we suggest 
 using the one above.
 
+<!---
 
 ## Create your own module {#devel_create_module_repo}
 
