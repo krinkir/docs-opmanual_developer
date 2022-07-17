@@ -125,7 +125,7 @@ and then choose **New repository**. In the _New repository_ page, choose the tem
 
 Click on **Create repository** to create the module repository.
 
-<!---
+
 
 ## Build a module
 
@@ -169,6 +169,7 @@ If the build is successful, you will see something like the following.
 <br/>
 Congrats! You just built your first Duckietown-compatible software module.
 
+<!---
 
 ## Run a module
 
