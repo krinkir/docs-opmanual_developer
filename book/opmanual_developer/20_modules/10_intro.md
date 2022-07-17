@@ -136,7 +136,6 @@ Click on **Create repository** to create the module repository.
 ## Build a module
 
 Building a module is very simple. To start, open a terminal and clone a module repository 
-<!---
 (we created one in section **TODO** ).
 
 Templates leave placeholders that you will need to replace with the proper information
@@ -144,7 +143,7 @@ about your module before you can build it.
 
 Open the file `Dockerfile` using any text editor and look for the following lines
 at the top of the file:
-
+<!---
 ```dockerfile
 ARG REPO_NAME="<REPO_NAME_HERE>"
 ARG DESCRIPTION="<DESCRIPTION_HERE>"
