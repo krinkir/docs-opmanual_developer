@@ -136,8 +136,9 @@ Click on **Create repository** to create the module repository.
 ## Build a module
 
 Building a module is very simple. To start, open a terminal and clone a module repository 
-(we created one in section **TODO** ).
 <!---
+(we created one in section **TODO** ).
+
 Templates leave placeholders that you will need to replace with the proper information
 about your module before you can build it.
 
