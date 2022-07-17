@@ -91,8 +91,7 @@ using the one above.
 
 
 
-## Create your own module
-<!--{#sec:devel_create_module_repo} -->
+## Create your own module {#sec:devel_create_module_repo}
 
 
 
@@ -113,7 +112,7 @@ and click on the Fork button at the top-right corner of the page.
     <img alt="github.com fork button" style='width:26em' src="images/github_fork_button.jpg"/>
 </figure>
 
-
+<!---
 
 
 Once you gained access to the template (either by joining the Duckietown developers
@@ -176,7 +175,7 @@ If the build is successful, you will see something like the following.
 <br/>
 Congrats! You just built your first Duckietown-compatible software module.
 
-<!---
+
 
 ## Run a module
 
