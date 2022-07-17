@@ -93,7 +93,7 @@ using the one above.
 
 ## Create your own module {#devel_create_module_repo}
 
-<!---
+
 
 In order to be able to create a Duckietown module, you need to gain access to
 the module template repositories on GitHub.
@@ -132,7 +132,7 @@ and then choose **New repository**. In the _New repository_ page, choose the tem
 <br/>
 
 Click on **Create repository** to create the module repository.
-
+<!---
 ## Build a module
 
 Building a module is very simple. To start, open a terminal and clone a module repository 
