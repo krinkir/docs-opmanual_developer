@@ -29,6 +29,8 @@ a developer, you might want to bookmark that URL, you will need it, **a lot**.
 
 ## What is a module
 
+<!---
+
 A module in Duckietown is a Docker image that complies with a **module template**
 (more about templates in the next section). Remember the 
 [ISO/IEC 9126](#sec:developer_basics_iso_9126) standard? well, 
@@ -59,7 +61,6 @@ types and their differences will be the topic of the section
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
 
-<!---
 
 ## Module Templates
 
