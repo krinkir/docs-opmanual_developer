@@ -1,4 +1,6 @@
+test
 
+<!---
 
 # Introduction {#sec:devel_modules_intro level=sec status=ready}
 
@@ -103,7 +105,7 @@ and click on the Fork button at the top-right corner of the page.
     <img alt="github.com fork button" style='width:26em' src="images/github_fork_button.jpg"/>
 </figure>
 
-<!---
+
 
 
 Once you gained access to the template (either by joining the Duckietown developers
