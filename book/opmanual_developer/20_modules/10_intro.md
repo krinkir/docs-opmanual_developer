@@ -89,7 +89,7 @@ Since understanding the differences between different templates is outside the s
 this section, we can use any template for the remainder of this section, we suggest 
 using the one above.
 
-
+<!---
 
 ## Create your own module {#sec:devel_create_module_repo}
 
@@ -197,3 +197,5 @@ TODO: This is a templated subsection
 ## Ask the community
 
 TODO: This is a templated subsection
+
+--->
