@@ -1,7 +1,3 @@
-test
-
-
-
 # Introduction {#sec:devel_modules_intro level=sec status=ready}
 
 Author: Andrea F. Daniele
@@ -64,9 +60,6 @@ types and their differences will be the topic of the section
 [](#sec:developer_module_types). What is important to know for now, is that a module
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
-
-
---->
 
 ## Module Templates
 
@@ -200,4 +193,4 @@ TODO: This is a templated subsection
 Todo: This is templated
 
 
-
+--->
