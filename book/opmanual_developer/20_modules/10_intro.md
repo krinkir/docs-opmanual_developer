@@ -89,10 +89,10 @@ Since understanding the differences between different templates is outside the s
 this section, we can use any template for the remainder of this section, we suggest 
 using the one above.
 
-
+<!---
 
 ## Create your own module {#sec:devel_create_module_repo}
-<!---
+
 
 
 In order to be able to create a Duckietown module, you need to gain access to
