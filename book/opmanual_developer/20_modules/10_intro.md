@@ -26,6 +26,7 @@ Note: Read the [ISO/IEC 9126](#sec:developer_basics_iso_9126) standard
 to learn more about product quality in software engineering. If you want to become
 a developer, you might want to bookmark that URL, you will need it, **a lot**. 
 
+<!---
 
 <minitoc/>
 
@@ -62,7 +63,7 @@ types and their differences will be the topic of the section
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
 
-<!---
+
 
 ## Module Templates
 
