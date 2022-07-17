@@ -36,11 +36,12 @@ A module in Duckietown is a Docker image that complies with a **module template*
 [ISO/IEC 9126](#sec:developer_basics_iso_9126) standard? well, 
 modules are designed to be highly **portable** and  **usable**.
 
-
+<!---
 Modules have a pre-defined file system structure with fixed locations for source code 
 and configuration files. File system structure and default locations are 
 template-dependent, check the section [YYY](#sec:devel_types_of_modules) to understand the
 different module templates available in Duckietown.
+--->
 
 Understanding the pros and cons of using Docker to isolate modules right now is crucial.
 
