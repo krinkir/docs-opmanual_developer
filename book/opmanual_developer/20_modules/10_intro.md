@@ -29,7 +29,7 @@ a developer, you might want to bookmark that URL, you will need it, **a lot**.
 
 ## What is a module
 
-<!---
+
 
 A module in Duckietown is a Docker image that complies with a **module template**
 (more about templates in the next section). Remember the 
@@ -42,6 +42,8 @@ template-dependent, check the section [](#devel_types_of_modules) to understand 
 different module templates available in Duckietown.
 
 Understanding the pros and cons of using Docker to isolate modules right now is crucial.
+
+<!---
 
 Bad news first! The biggest negative effect of using Docker to isolate modules
 is that by doing so, we are wrapping our source code inside a Docker image. This
