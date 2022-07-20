@@ -144,12 +144,11 @@ about your module before you can build it.
 Open the file `Dockerfile` using any text editor and look for the following lines
 at the top of the file:
 
-<code>
-dockerfile
+```Dockerfile
 ARG REPO_NAME="<REPO_NAME_HERE>"
 ARG DESCRIPTION="<DESCRIPTION_HERE>"
 ARG MAINTAINER="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
-</code>
+```
 
 
 Replace the placeholders strings with, respectively,
