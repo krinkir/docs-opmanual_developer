@@ -62,7 +62,7 @@ life easier, we could write a book about it, but they will become clear as we pr
 
 
 Duckietown defines a set of module types that you can choose from. The list of module
-types and their differences will be the topic of the section  **TBD**. What is important to know for now, is that a module
+types and their differences will be the topic of the section  [](#sec:devel_module_types). What is important to know for now, is that a module
 type defines the environment your code will run in. For each module type, a template
 repository is provided.
 
@@ -136,7 +136,7 @@ Click on **Create repository** to create the module repository.
 ## Build a module
 
 Building a module is very simple. To start, open a terminal and clone a module repository 
-(we created one in section **TODO** ).
+(we created one in section [](#devel_create_module_repo) ).
 
 Templates leave placeholders that you will need to replace with the proper information
 about your module before you can build it.
