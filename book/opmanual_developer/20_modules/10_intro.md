@@ -146,7 +146,11 @@ at the top of the file:
 
 ```
 ARG REPO_NAME="<REPO_NAME_HERE>"
+```
+```
 ARG DESCRIPTION="<DESCRIPTION_HERE>"
+```
+```
 ARG MAINTAINER="<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)"
 ```
 
